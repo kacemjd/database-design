@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="fr.ensimag.view.AddVehiclePage">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="500" height="440"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="e3cbf" class="javax.swing.JLabel" binding="addAVehicleLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="15" left="0" bottom="30" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Add a vehicle"/>
+        </properties>
+      </component>
+      <component id="d3b83" class="javax.swing.JButton" binding="backButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="15" left="0" bottom="0" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Back"/>
+        </properties>
+      </component>
+      <component id="5bd63" class="javax.swing.JLabel" binding="registrationLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Registration"/>
+        </properties>
+      </component>
+      <component id="e2ed5" class="javax.swing.JTextField" binding="registrationField">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag top="7" left="0" bottom="7" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <name value=""/>
+          <text value=""/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="150d6" class="javax.swing.JLabel" binding="brandLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Brand"/>
+        </properties>
+      </component>
+      <component id="f6fb4" class="javax.swing.JComboBox" binding="brandMenu">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="7" left="0" bottom="7" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Renault"/>
+            <item value="Citroen"/>
+            <item value="Volksvagen"/>
+            <item value="Smart"/>
+            <item value="Porsche"/>
+            <item value="Toyota"/>
+            <item value="Dacia"/>
+            <item value="Tesla"/>
+            <item value="Fiat"/>
+          </model>
+        </properties>
+      </component>
+      <component id="27259" class="javax.swing.JLabel" binding="modelLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Model"/>
+        </properties>
+      </component>
+      <component id="e7e16" class="javax.swing.JLabel" binding="energyLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Energy"/>
+        </properties>
+      </component>
+      <component id="7a4ff" class="javax.swing.JLabel" binding="taxPowerLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Tax power"/>
+        </properties>
+      </component>
+      <component id="7bf8a" class="javax.swing.JLabel" binding="numberOfSeatsLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="15" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <text value="Number of seats"/>
+        </properties>
+      </component>
+      <component id="d81e0" class="javax.swing.JComboBox" binding="seatsMenu">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="7" left="0" bottom="7" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="2"/>
+            <item value="3"/>
+            <item value="4"/>
+            <item value="5"/>
+            <item value="6"/>
+            <item value="7"/>
+            <item value="8"/>
+            <item value="9"/>
+            <item value="10"/>
+          </model>
+        </properties>
+      </component>
+      <component id="fbb0e" class="javax.swing.JTextField" binding="taxPowerField">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag top="7" left="0" bottom="7" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="cf0b7" class="javax.swing.JComboBox" binding="energyMenu">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="7" left="0" bottom="7" right="0" weightx="1.0" weighty="1.0"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Essence"/>
+            <item value="Electrique"/>
+            <item value="Diesel"/>
+          </model>
+        </properties>
+      </component>
+      <component id="77baf" class="javax.swing.JButton" binding="addThisVehicleButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="15" left="0" bottom="15" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <text value="Add this vehicle"/>
+        </properties>
+      </component>
+      <component id="88b9b" class="javax.swing.JTextField" binding="modelField">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+</form>

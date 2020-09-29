@@ -1,0 +1,182 @@
+﻿/*alter session set current_schema=svenssop;*/
+
+
+alter session set nls_timestamp_format='DD-MM-YYYY HH24:MI:SS';
+
+
+/* affichage avant réinitialisation */
+/*select table_name from all_tables
+where owner='SVENSSOP';*/
+
+
+select * from Utilisateur;
+select * from Vehicule;
+select * from Trajet;
+select * from Parcours;
+select * from Troncon;
+select * from PeutConduire;
+select * from EstComposeDe;
+
+
+
+
+/* réinitialisation */
+DELETE FROM Utilisateur;
+DELETE FROM Vehicule;
+DELETE FROM Trajet;
+DELETE FROM Troncon;
+DELETE FROM PeutConduire;
+DELETE FROM EstComposeDe;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Test Utilisateurs*/
+INSERT INTO Utilisateur VALUES
+('victor@gmail.com', 'Bertin', 'Victor', 'Grenoble', 'footballmanager', 150);
+INSERT INTO Utilisateur VALUES
+('bertin@gmail.com', 'Bertin', 'Victor', 'Paris', '12345678',999203);
+INSERT INTO Utilisateur VALUES
+('baptiste@gmail.com', 'Seux', 'Baptiste', 'Grenoble', '38drone38', 150);
+INSERT INTO Utilisateur VALUES
+('kevin@gmail.com', 'Callet', 'Kevin', 'Grenoble','kekenational',  150);
+INSERT INTO Utilisateur VALUES
+('kacem@gmail.com', 'Jedoui', 'Kacem', 'Grenoble', 'lamagnifiquebarbe', 150);
+INSERT INTO Utilisateur VALUES
+('paul@gmail.com', 'Svensson', 'Paul', 'Grenoble', 'lignemaginotforever', 150);
+INSERT INTO Utilisateur VALUES
+('jean-michel@gmail.com', 'Michel', 'Jean', 'Paris',  '123456789', 200);
+INSERT INTO Utilisateur VALUES
+('jean-maxime@gmail.com', 'Maxime', 'Jean', 'Lyon', 'dragondragon', 125);
+INSERT INTO Utilisateur VALUES
+('rocky@gmail.com', 'Balboa', 'Rocky', 'Caen', 'AADDRRIIAANN', 300);
+INSERT INTO Utilisateur VALUES
+('louis@gmail.com', 'De Funes', 'Louis', 'St-Tropez', 'mytailorisrich', 300);
+INSERT INTO Utilisateur VALUES
+('rene@gmail.com', 'Olry', 'Rene', 'Valence', 'onnepassepas', 250);
+
+
+
+
+/*Test Véhicule*/
+INSERT INTO Vehicule VALUES
+('BZ-486-FH', 'Renault', 'Megane', 'Essence', 9, 5);
+INSERT INTO Vehicule VALUES
+('JT-972-GB', 'Renault', 'Zoe', 'Electrique', 6, 5);
+INSERT INTO Vehicule VALUES
+('OF-825-JD', 'Citroen', 'C4', 'Electrique', 7, 7);
+INSERT INTO Vehicule VALUES
+('HT-329-SB', 'Volkswagen', 'Golf', 'Diesel', 10, 5);
+INSERT INTO Vehicule VALUES
+('EF-284-JG', 'Smart', 'Fortwo', 'Diesel', 4, 2);
+INSERT INTO Vehicule VALUES
+('SB-286-WI', 'Porsche', 'Cayenne', 'Diesel', 20, 5);
+INSERT INTO Vehicule VALUES
+('KG-106-EB', 'Toyota', 'Yaris', 'Essence', 9, 5);
+INSERT INTO Vehicule VALUES
+('OV-320-EL', 'Dacia', 'Duster', 'Essence', 11, 5);
+INSERT INTO Vehicule VALUES
+('DO-674-PO', 'Tesla', 'Model S', 'Electrique', 6, 5);
+INSERT INTO Vehicule VALUES
+('ON-764-WZ', 'Fiat', '500', 'Essence', 7, 4);
+
+
+/*Test Trajet*/
+INSERT INTO Trajet VALUES
+(1, '01-06-2020 14:00:00', 4, 3, 'BZ-486-FH', 'rene@gmail.com');
+INSERT INTO Trajet VALUES
+(2, '12-05-2020 15:00:00', 4, 3, 'JT-972-GB', 'louis@gmail.com');
+INSERT INTO Trajet VALUES
+(3, '24-05-2020 08:30:00', 6, 3, 'OF-825-JD', 'rocky@gmail.com');
+INSERT INTO Trajet VALUES
+(4, '14-07-2020 09:45:00', 4, 3, 'SB-286-WI', 'jean-michel@gmail.com');
+INSERT INTO Trajet VALUES
+(5, '29-08-2020 12:15:00', 4, 3,  'OV-320-EL', 'rocky@gmail.com'); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Test tronçon: villes départ != villes arrivées (Grenoble->Lyon->Paris)*/
+INSERT INTO Troncon VALUES
+(1, 1, 'Grenoble', 'Lyon', 5.7147, 45.1908,  4.825605, 45.7483, 112, 80, NULL, 'Gare Routière',  'Gare Routière');
+INSERT INTO Troncon VALUES
+(2, 1, 'Lyon', 'Paris',4.825605, 45.7483, 2.382671, 48.838246, 468, 260, NULL,  'Gare Routière',  'Gare Routière');
+
+
+/*Test tronçon: villes départ = ville arrivée (Gare routière->Victor Hugo->Parc Paul Mistral) */
+INSERT INTO Troncon VALUES
+(3, 2, 'Grenoble', 'Grenoble', 5.7147, 45.1908, 5.724029, 45.188454, 2, 12, NULL,  'Gare Routière',  'Place Victor Hugo');
+INSERT INTO Troncon VALUES
+(4, 2, 'Grenoble', 'Grenoble',  5.7354, 45.1849, 5.78309, 45.21531, 4, 20, NULL,  'Place Victor Hugo', 'Parc Paul Mistral');
+
+
+/*Test tronçon: Lyon(Bellecour) -> Lyon(Gare Routière) -> St-Etienne(Gare Routière) -> St-Etienne (hôtel de ville)*/
+INSERT INTO Troncon VALUES
+(5, 3, 'Lyon', 'Lyon',  4.8319, 45.7575, 5.724029, 45.188454, 1, 3, NULL, 'PlaceBellecour', 'Gare Routière');
+INSERT INTO Troncon VALUES
+(6, 3, 'Lyon', 'St-Etienne',  5.724029,  45.188454,   4.402798, 45.442476, 118, 70, NULL, 'Gare Routière', 'Gare Routière');
+INSERT INTO Troncon VALUES
+(7, 3, 'St-Etienne', 'St-Etienne', 4.402798, 45.442476,  4.38707, 45.4401884, 2, 10, NULL, 'Gare Routière', 'St-Etienne');
+
+
+/*Test PeutConduire*/
+INSERT INTO PeutConduire VALUES
+('rene@gmail.com',  'BZ-486-FH');
+INSERT INTO PeutConduire VALUES
+('louis@gmail.com',  'JT-972-GB');
+INSERT INTO PeutConduire VALUES
+('rocky@gmail.com', 'OF-825-JD');
